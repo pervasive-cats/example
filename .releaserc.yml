@@ -1,0 +1,67 @@
+branches:
+  - 'main'
+  - { name: 'beta', prerelease: true, channel: beta }
+plugins:
+  - - '@semantic-release/commit-analyzer'
+    - preset: conventionalcommits
+  - '@semantic-release/release-notes-generator'
+  - '@semantic-release/changelog'
+  - - '@google/semantic-release-replace-plugin'
+    - replacements:
+        - files:
+            - build.sbt
+          from: 'version := .*'
+          to: 'version := "${nextRelease.version}",'
+          results:
+            - file: build.sbt
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+          countMatches: true
+        - files:
+            - README.md
+          from: 'io/.*/io'
+          to: 'io/${nextRelease.version}/io'
+          results:
+            - file: README.md
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+          countMatches: true
+        - files:
+            - package.json
+          from: '"version": ".*"'
+          to: '"version": "${nextRelease.version}"'
+          results:
+            - file: package.json
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+        - files:
+            - sonar-project.properties
+          from: 'sonar.projectVersion=.*'
+          to: 'sonar.projectVersion=${nextRelease.version}'
+          results:
+            - file: sonar-project.properties
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
+  - - '@semantic-release/exec'
+    - publishCmd: |
+        sbt assembly;
+        if [[ ${nextRelease.channel} == beta ]]; then
+          echo "prerelease=1\n" >> $GITHUB_OUTPUT;
+        else 
+          echo "prerelease=0\n" >> $GITHUB_OUTPUT;
+        fi
+  - - '@semantic-release/git'
+    - assets:
+        - build.sbt
+        - README.md
+        - CHANGELOG.md
+        - package.json
+        - sonar-project.properties
+  - - '@semantic-release/github'
+    - assets:
+        - path: target/scala-3.2.1/main.jar
+          label: Main JAR file
