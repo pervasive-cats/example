@@ -31,7 +31,7 @@ plugins:
         - files:
             - package.json
           from: '\"version\": \".*\"'
-          to: '\"version\": \"${nextRelease.version}\"'
+          to: '"version": "${nextRelease.version}"'
           results:
             - file: package.json
               hasChanged: true
