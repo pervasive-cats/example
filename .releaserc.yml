@@ -72,9 +72,9 @@ plugins:
     - publishCmd: |
         sbt assembly;
         if [[ ${nextRelease.channel} == beta ]]; then
-          echo "prerelease=1" >> $GITHUB_OUTPUT;
+          echo "release=0" >> $GITHUB_OUTPUT;
         else
-          echo "prerelease=0" >> $GITHUB_OUTPUT;
+          echo "release=1" >> $GITHUB_OUTPUT;
         fi
       shell: /bin/bash
   - - '@semantic-release/git'
