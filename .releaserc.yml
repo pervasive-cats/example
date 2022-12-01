@@ -40,13 +40,23 @@ plugins:
           countMatches: true
         - files:
             - package-lock.json
-          from: '\"name\": \"toys-store-bc-template\",\w*\"version\": \".*\"'
-          to: '\"name\": \"toys-store-bc-template\",\w*\"version\": \"${nextRelease.version}\"'
+          from: '\"name\": \"example\",\\n  \"version\": \".*\"'
+          to: '\"name\": \"example\",\n  \"version\": \"${nextRelease.version}\"'
           results:
             - file: package-lock.json
               hasChanged: true
-              numMatches: 2
-              numReplacements: 2
+              numMatches: 1
+              numReplacements: 1
+          countMatches: true
+        - files:
+            - package-lock.json
+          from: '\"name\": \"example\",\\n      \"version\": \".*\"'
+          to: '\"name\": \"example\",\n      \"version\": \"${nextRelease.version}\"'
+          results:
+            - file: package-lock.json
+              hasChanged: true
+              numMatches: 1
+              numReplacements: 1
           countMatches: true
         - files:
             - sonar-project.properties
