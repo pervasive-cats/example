@@ -3,5 +3,6 @@ pages = [{"l":"index.html#","e":false,"i":"","n":"example","t":"example","d":"",
 {"l":"io/github/pervasivecats/Example.html#","e":false,"i":"","n":"Example","t":"Example","d":"io.github.pervasivecats","k":"trait"},
 {"l":"io/github/pervasivecats/Example.html#a-0","e":false,"i":"","n":"a","t":"a: Int","d":"io.github.pervasivecats.Example","k":"val"},
 {"l":"io/github/pervasivecats/Example.html#b-0","e":false,"i":"","n":"b","t":"b: Double","d":"io.github.pervasivecats.Example","k":"val"},
+{"l":"io/github/pervasivecats/Example.html#c-0","e":false,"i":"","n":"c","t":"c: Long","d":"io.github.pervasivecats.Example","k":"val"},
 {"l":"io/github/pervasivecats/Example$.html#","e":false,"i":"","n":"Example","t":"Example","d":"io.github.pervasivecats","k":"object"},
-{"l":"io/github/pervasivecats/Example$.html#apply-fffffa03","e":false,"i":"","n":"apply","t":"apply(a: Int, b: Double): Example","d":"io.github.pervasivecats.Example","k":"def"}];
+{"l":"io/github/pervasivecats/Example$.html#apply-b3f","e":false,"i":"","n":"apply","t":"apply(a: Int, b: Double, c: Long): Example","d":"io.github.pervasivecats.Example","k":"def"}];
