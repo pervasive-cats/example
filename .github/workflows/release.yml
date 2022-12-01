@@ -65,11 +65,13 @@ jobs:
           GIT_AUTHOR_EMAIL: ${{ steps.import-gpg.outputs.email }}
           GIT_COMMITTER_NAME: ${{ steps.import-gpg.outputs.name }}
           GIT_COMMITTER_EMAIL: ${{ steps.import-gpg.outputs.email }}
+      - name: Test purposes
+        run: echo ${{ steps.publish.outputs.prerelease }}
       - name: Generate scaladoc
-        if: steps.publish.outputs.prerelease == 0
+        if: ${{ steps.publish.outputs.prerelease }} == 0
         run: sbt doc
       - name: Publish on GitHub Pages
-        if: steps.publish.outputs.prerelease == 0
+        if: ${{ steps.publish.outputs.prerelease }} == 0
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: target/scala-3.2.1/api

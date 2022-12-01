@@ -41,7 +41,7 @@ plugins:
         - files:
             - package-lock.json
           from: '\"name\": \"example\",\n  \"version\": \".*\"'
-          to: '"name": "example",\n  "version": "${nextRelease.version}"'
+          to: "\"name\": \"example\",\n  \"version\": \"${nextRelease.version}\""
           results:
             - file: package-lock.json
               hasChanged: true
@@ -51,7 +51,7 @@ plugins:
         - files:
             - package-lock.json
           from: '\"name\": \"example\",\n      \"version\": \".*\"'
-          to: '"name": "example",\n      "version": "${nextRelease.version}"'
+          to: "\"name\": \"example\",\n      \"version\": \"${nextRelease.version}\""
           results:
             - file: package-lock.json
               hasChanged: true
@@ -72,9 +72,11 @@ plugins:
     - publishCmd: |
         sbt assembly;
         if [[ ${nextRelease.channel} == beta ]]; then
-          echo "prerelease=1\n" >> $GITHUB_OUTPUT;
-        else 
-          echo "prerelease=0\n" >> $GITHUB_OUTPUT;
+          echo "prerelease";
+          echo -e "prerelease=1\n" >> $GITHUB_OUTPUT;
+        else
+          echo "no prerelease";
+          echo -e "prerelease=0\n" >> $GITHUB_OUTPUT;
         fi
   - - '@semantic-release/git'
     - assets:
