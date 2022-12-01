@@ -16,9 +16,11 @@ class Test extends AnyFunSpec {
       it("should retain its values") {
         val a = 1
         val b = 2.0
-        val example = Example(a, b)
+        val c = 5L
+        val example = Example(a, b, c)
         example.a shouldBe a
         example.b shouldBe b
+        example.c shouldBe c
       }
     }
   }
