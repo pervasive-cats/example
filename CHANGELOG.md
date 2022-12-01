@@ -1,3 +1,16 @@
+# [1.0.0-beta.6](https://github.com/pervasive-cats/example/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2022-12-01)
+
+
+### Bug Fixes
+
+* basta non ne posso più fatemi uscire da questo schermo ([d7d105a](https://github.com/pervasive-cats/example/commit/d7d105a196aa697aaabbac08e6a5a92e2fdc457a))
+* lammorte ([f69b976](https://github.com/pervasive-cats/example/commit/f69b97632c7700a744623a90235b5d0a66baf301))
+
+
+### Features
+
+* pasta con il tonno ([4cf9269](https://github.com/pervasive-cats/example/commit/4cf92694e3a9dd4c3e537a31a1f6a3e99cb198a8))
+
 # [1.0.0-beta.5](https://github.com/pervasive-cats/example/compare/v1.0.0-beta.4...v1.0.0-beta.5) (2022-12-01)
 
 
