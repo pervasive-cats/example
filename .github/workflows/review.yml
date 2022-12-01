@@ -33,15 +33,6 @@ jobs:
           key: ${{ runner.os }}-sbt-${{ hashfiles('**/build.sbt') }}
       - name: Generate coverage report
         run: sbt clean test coverageReport
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          directory: target/scala-3.2.1/scoverage-report
-          fail_ci_if_error: true
-          flags: unittests
-          name: codecov-umbrella
-          verbose: true
       - name: Replace all working directory paths with sources path
         run: sed -i -e s,`pwd`,/github/workspace,g target/scala-3.2.1/scoverage-report/scoverage.xml
       - name: SonarCloud Scan

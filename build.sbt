@@ -32,7 +32,6 @@ lazy val root = project
     wartremoverErrors ++= Warts.all,
     version := "1.0.0-beta.6",
     coverageEnabled := true,
-    coverageFailOnMinimum := true,
     coverageMinimumStmtTotal := 80,
     coverageMinimumBranchTotal := 80,
     headerLicense := Some(
