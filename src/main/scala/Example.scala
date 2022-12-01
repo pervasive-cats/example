@@ -11,7 +11,7 @@ trait Example {
   val a: Int
 
   val b: Double
-  
+
   val c: Long
 }
 
