@@ -1,3 +1,10 @@
+# [1.0.0-beta.2](https://github.com/pervasive-cats/example/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-12-01)
+
+
+### Features
+
+* add example class 2 ([a0abc3f](https://github.com/pervasive-cats/example/commit/a0abc3f2ab11e7577c7a8401ea3ea17f9be8b657))
+
 # 1.0.0-beta.1 (2022-12-01)
 
 
