@@ -72,10 +72,8 @@ plugins:
     - publishCmd: |
         sbt assembly;
         if [[ ${nextRelease.channel} == beta ]]; then
-          echo "prerelease";
           echo "prerelease=1" >> $GITHUB_OUTPUT;
         else
-          echo "no prerelease";
           echo "prerelease=0" >> $GITHUB_OUTPUT;
         fi
       shell: /bin/bash
