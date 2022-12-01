@@ -1,17 +1,17 @@
 branches:
-  - 'main'
-  - { name: 'beta', prerelease: true, channel: beta }
+  - main
+  - { name: beta, prerelease: true, channel: beta }
 plugins:
-  - - '@semantic-release/commit-analyzer'
+  - - @semantic-release/commit-analyzer
     - preset: conventionalcommits
-  - '@semantic-release/release-notes-generator'
-  - '@semantic-release/changelog'
-  - - '@google/semantic-release-replace-plugin'
+  - @semantic-release/release-notes-generator
+  - @semantic-release/changelog
+  - - @google/semantic-release-replace-plugin
     - replacements:
         - files:
             - build.sbt
-          from: 'version := .*'
-          to: 'version := "${nextRelease.version}",'
+          from: version := .*
+          to: version := "${nextRelease.version}",
           results:
             - file: build.sbt
               hasChanged: true
@@ -20,8 +20,8 @@ plugins:
           countMatches: true
         - files:
             - README.md
-          from: 'io/.*/io'
-          to: 'io/${nextRelease.version}/io'
+          from: pervasive-cats.github.io/.*/io
+          to: pervasive-cats.github.io/${nextRelease.version}/io
           results:
             - file: README.md
               hasChanged: true
@@ -60,15 +60,15 @@ plugins:
           countMatches: true
         - files:
             - sonar-project.properties
-          from: 'sonar.projectVersion=.*'
-          to: 'sonar.projectVersion=${nextRelease.version}'
+          from: sonar.projectVersion=.*
+          to: sonar.projectVersion=${nextRelease.version}
           results:
             - file: sonar-project.properties
               hasChanged: true
               numMatches: 1
               numReplacements: 1
           countMatches: true
-  - - '@semantic-release/exec'
+  - - @semantic-release/exec
     - publishCmd: |
         sbt assembly;
         if [[ ${nextRelease.channel} == beta ]]; then
@@ -76,14 +76,15 @@ plugins:
         else 
           echo "prerelease=0\n" >> $GITHUB_OUTPUT;
         fi
-  - - '@semantic-release/git'
+  - - @semantic-release/git
     - assets:
         - build.sbt
         - README.md
         - CHANGELOG.md
         - package.json
+        - package-lock.json
         - sonar-project.properties
-  - - '@semantic-release/github'
+  - - @semantic-release/github
     - assets:
         - path: target/scala-3.2.1/main.jar
           label: Main JAR file
