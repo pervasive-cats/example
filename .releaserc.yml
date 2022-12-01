@@ -71,7 +71,7 @@ plugins:
   - - '@semantic-release/exec'
     - publishCmd: |
         sbt assembly;
-        if [[ ${nextRelease.channel} == beta ]]; then
+        if [[ "${nextRelease.channel}" == "beta" ]]; then
           echo "release=0" >> $GITHUB_OUTPUT;
         else
           echo "release=1" >> $GITHUB_OUTPUT;
