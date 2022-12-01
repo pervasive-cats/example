@@ -6,8 +6,6 @@
 [![Scaladoc](https://img.shields.io/github/v/release/pervasive-cats/example?label=scaladoc)](https://pervasive-cats.github.io/1.0.0-beta.7/io/github/pervasivecats)
 [![Issues](https://img.shields.io/github/issues/pervasive-cats/example)](https://github.com/pervasive-cats/example/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/pervasive-cats/example)](https://github.com/pervasive-cats/example/pulls)
-<!-- Codecov badge -->
-<!-- Sonarcloud badges -->
 
 ### Copyright statement
 
