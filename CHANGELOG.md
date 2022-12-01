@@ -1,3 +1,10 @@
+# [1.0.0-beta.3](https://github.com/pervasive-cats/example/compare/v1.0.0-beta.2...v1.0.0-beta.3) (2022-12-01)
+
+
+### Features
+
+* electric boogaloo ([9d6969b](https://github.com/pervasive-cats/example/commit/9d6969b29dcfc82820a2f22c8c39478e5cfb908c))
+
 # [1.0.0-beta.2](https://github.com/pervasive-cats/example/compare/v1.0.0-beta.1...v1.0.0-beta.2) (2022-12-01)
 
 

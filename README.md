@@ -3,7 +3,7 @@
 [![Build status](https://github.com/pervasive-cats/example/actions/workflows/release.yml/badge.svg)](https://github.com/pervasive-cats/example/actions/workflows/release.yml)
 [![semantic-release: conventional-commits](https://img.shields.io/badge/semantic--release-conventional_commits-e10098?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
 [![Latest release](https://img.shields.io/github/v/release/pervasive-cats/example?sort=semver)](https://github.com/pervasive-cats/example/releases/latest/)
-[![Scaladoc](https://img.shields.io/github/v/release/pervasive-cats/toys-store-bc-template?label=scaladoc&sort=semver)](https://pervasive-cats.github.io/example/io/github/pervasivecats)
+[![Scaladoc](https://img.shields.io/github/v/release/pervasive-cats/toys-store-bc-template?label=scaladoc&sort=semver)](https://pervasive-cats.github.io/1.0.0-beta.3/io/github/pervasivecats)
 [![Issues](https://img.shields.io/github/issues/pervasive-cats/example)](https://github.com/pervasive-cats/example/issues)
 [![Pull requests](https://img.shields.io/github/issues-pr/pervasive-cats/example)](https://github.com/pervasive-cats/example/pulls)
 <!-- Codecov badge -->
