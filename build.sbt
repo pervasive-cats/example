@@ -30,7 +30,7 @@ lazy val root = project
       scalatest
     ),
     wartremoverErrors ++= Warts.all,
-    version := "1.0.0-beta.3",
+    version := "1.0.0-beta.4",
     coverageEnabled := true,
     coverageFailOnMinimum := true,
     coverageMinimumStmtTotal := 80,
