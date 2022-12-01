@@ -11,13 +11,13 @@ trait Example {
   val a: Int
 
   val b: Double
-  
+
   val c: Long
 }
 
 object Example {
 
   final private case class ExampleImpl(a: Int, b: Double, c: Long) extends Example
-  
+
   def apply(a: Int, b: Double, c: Long): Example = ExampleImpl(a, b, c)
 }
