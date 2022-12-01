@@ -19,16 +19,6 @@ plugins:
               numReplacements: 1
           countMatches: true
         - files:
-            - README.md
-          from: pervasive-cats.github.io/.*/io
-          to: pervasive-cats.github.io/${nextRelease.version}/io
-          results:
-            - file: README.md
-              hasChanged: true
-              numMatches: 1
-              numReplacements: 1
-          countMatches: true
-        - files:
             - package.json
           from: '\"version\": \".*\"'
           to: '"version": "${nextRelease.version}"'
