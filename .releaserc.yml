@@ -78,7 +78,7 @@ plugins:
           echo "no prerelease";
           echo "prerelease=0" >> $GITHUB_OUTPUT;
         fi
-    - shell: /bin/bash
+      shell: /bin/bash
   - - '@semantic-release/git'
     - assets:
         - build.sbt
