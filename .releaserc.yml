@@ -73,11 +73,12 @@ plugins:
         sbt assembly;
         if [[ ${nextRelease.channel} == beta ]]; then
           echo "prerelease";
-          echo -e "prerelease=1\n" >> $GITHUB_OUTPUT;
+          echo "prerelease=1" >> $GITHUB_OUTPUT;
         else
           echo "no prerelease";
-          echo -e "prerelease=0\n" >> $GITHUB_OUTPUT;
+          echo "prerelease=0" >> $GITHUB_OUTPUT;
         fi
+    - shell: /bin/bash
   - - '@semantic-release/git'
     - assets:
         - build.sbt

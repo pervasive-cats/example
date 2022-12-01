@@ -9,6 +9,7 @@ package io.github.pervasivecats
 trait Example {
 
   val a: Int
+
   val b: Double
 }
 
