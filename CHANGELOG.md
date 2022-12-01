@@ -1,3 +1,11 @@
+# [1.0.0-beta.7](https://github.com/pervasive-cats/example/compare/v1.0.0-beta.6...v1.0.0-beta.7) (2022-12-01)
+
+
+### Bug Fixes
+
+* non ne posso più ([b2d7c48](https://github.com/pervasive-cats/example/commit/b2d7c4829ac99845b806201b54f140878dd3b5d9))
+* sono piena ([ca1af1c](https://github.com/pervasive-cats/example/commit/ca1af1cdec7a4b9cd6aed129997bd28a3935febd))
+
 # [1.0.0-beta.6](https://github.com/pervasive-cats/example/compare/v1.0.0-beta.5...v1.0.0-beta.6) (2022-12-01)
 
 
