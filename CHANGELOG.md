@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/pervasive-cats/example/compare/v1.0.0...v1.1.0) (2022-12-12)
+
+
+### Features
+
+* pennette al pesto ([bf0c5d9](https://github.com/pervasive-cats/example/commit/bf0c5d9e4fa246e1852c5f4df6d0e66a4ac61953))
+
 # 1.0.0 (2022-12-01)
 
 
