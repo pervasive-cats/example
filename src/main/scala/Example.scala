@@ -17,7 +17,7 @@ trait Example {
 
 object Example {
 
-  final private case class ExampleImpl( a: Int, b: Double, c: Long ) extends Example
+  final private case class ExampleImpl(a: Int, b: Double, c: Long) extends Example
 
   def apply(a: Int, b: Double, c: Long): Example = ExampleImpl(a, b, c)
 }
